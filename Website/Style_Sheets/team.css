@@ -46,28 +46,24 @@ body {
 /* ========================= */
 
 .logo {
-    width: 70px;
-    height: 70px;
-
-    background-color: lightgray;
-
-    border-radius: 50%;
-
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    font-weight: bold;
-
-    color: black;
+    justify-content: center;
 
     flex-shrink: 0;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
 
     transition: 0.3s;
 }
 
-.logo:hover {
-    transform: rotate(5deg) scale(1.05);
+.logo img:hover {
+    transform: scale(1.05) rotate(3deg);
 }
 
 /* ========================= */

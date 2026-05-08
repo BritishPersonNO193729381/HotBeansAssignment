@@ -32,29 +32,29 @@ body {
     z-index: 1000;
 }
 
+/* ========================= */
 /* LOGO */
+/* ========================= */
 
 .logo {
-    width: 70px;
-    height: 70px;
-
-    background-color: lightgray;
-
-    border-radius: 50%;
-
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    font-weight: bold;
+    flex-shrink: 0;
+}
 
-    color: black;
+.logo img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
 
     transition: 0.3s;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.logo img:hover {
+    transform: scale(1.05) rotate(3deg);
 }
 
 /* CENTER NAVIGATION */
