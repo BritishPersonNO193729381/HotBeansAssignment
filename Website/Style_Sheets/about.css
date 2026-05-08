@@ -2,11 +2,127 @@
 /* ABOUT PAGE STYLE SHEET */
 /* ========================= */
 
+/* GLOBAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* SMOOTH SCROLLING FOR EASE OF ACCESS (and also since ik sams gunna review the website lol) */
+}
+
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
+
     background-color: #2d2d2d;
+
     color: white;
+}
+
+/* REMOVE DEFAULT LINK COLOURS (Im not fancy...) */
+
+a {
+    color: inherit;
+}
+
+/* ========================= */
+/* NAVIGATION BAR */
+/* ========================= */
+
+.navbar {
+    background-color: #3b3b3b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 25px;
+
+    border-bottom: 2px solid black;
+}
+
+/* LOGO LAYOUT */
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    background-color: lightgray;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+/* CENTER NAVIGATION */
+
+.nav-center {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: black;
+
+    background-color: lightgray;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: white;
+
+    transform: translateY(-2px);
+}
+
+/* APPLICATION BUTTON */
+
+.apply-button a {
+    text-decoration: none;
+
+    color: black;
+
+    background-color: lightgray;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.apply-button a:hover {
+    background-color: white;
 }
 
 /* ========================= */
@@ -37,8 +153,8 @@ body {
 
 .about-header h1 {
     font-size: 50px;
+
     margin-bottom: 20px;
-    color: white;
 }
 
 .about-header p {
@@ -47,6 +163,7 @@ body {
     margin: auto;
 
     font-size: 20px;
+
     line-height: 1.6;
 
     color: lightgray;
@@ -86,6 +203,7 @@ body {
 
 .about-image img {
     width: 350px;
+
     max-width: 100%;
 
     border-radius: 15px;
@@ -93,6 +211,8 @@ body {
     border: 3px solid black;
 
     box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+
+    object-fit: cover;
 }
 
 /* ========================= */
@@ -101,6 +221,7 @@ body {
 
 .about-text {
     flex: 1;
+
     min-width: 300px;
 
     color: black;
@@ -108,11 +229,13 @@ body {
 
 .about-text h2 {
     font-size: 40px;
+
     margin-bottom: 20px;
 }
 
 .about-text p {
     font-size: 18px;
+
     line-height: 1.7;
 
     margin-bottom: 20px;
@@ -128,6 +251,7 @@ body {
     text-decoration: none;
 
     background-color: #3b3b3b;
+
     color: white;
 
     padding: 15px 30px;
@@ -135,6 +259,7 @@ body {
     border-radius: 10px;
 
     font-size: 18px;
+
     font-weight: bold;
 
     transition: 0.3s;
@@ -142,6 +267,7 @@ body {
 
 .about-btn:hover {
     background-color: #1f1f1f;
+
     transform: scale(1.05);
 }
 
@@ -233,6 +359,7 @@ body {
 
 .stat-box h2 {
     font-size: 40px;
+
     margin-bottom: 10px;
 }
 
@@ -329,31 +456,36 @@ body {
 /* RESPONSIVE DESIGN */
 /* ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-center {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
 
     .about-content {
         flex-direction: column;
+
         text-align: center;
     }
 
     .about-text {
         color: black;
     }
-
-    .about-header h1 {
-        font-size: 40px;
-    }
-
-    .about-text h2 {
-        font-size: 32px;
-    }
-
-    .why-us-section h2 {
-        font-size: 32px;
-    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .about-container {
         padding: 20px;
@@ -366,17 +498,37 @@ body {
     }
 
     .about-header h1 {
+        font-size: 36px;
+    }
+
+    .about-header p {
+        font-size: 17px;
+    }
+
+    .about-text h2 {
         font-size: 32px;
     }
 
-    .about-header p,
     .about-text p {
         font-size: 16px;
+    }
+
+    .why-us-section h2 {
+        font-size: 32px;
     }
 
     .info-card,
     .why-card,
     .stat-box {
         width: 100%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a,
+    .apply-button a {
+        padding: 12px 18px;
     }
 }

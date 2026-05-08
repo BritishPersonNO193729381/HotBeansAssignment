@@ -2,12 +2,21 @@
 /* MEET THE TEAM STYLE SHEET */
 /* ========================= */
 
+/* ========================= */
 /* GENERAL PAGE STYLING */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
+
     background-color: #2d2d2d;
+
     color: white;
 }
 
@@ -32,7 +41,9 @@ body {
     z-index: 1000;
 }
 
+/* ========================= */
 /* LOGO */
+/* ========================= */
 
 .logo {
     width: 70px;
@@ -47,7 +58,10 @@ body {
     align-items: center;
 
     font-weight: bold;
+
     color: black;
+
+    flex-shrink: 0;
 
     transition: 0.3s;
 }
@@ -56,7 +70,9 @@ body {
     transform: rotate(5deg) scale(1.05);
 }
 
+/* ========================= */
 /* CENTER NAVIGATION */
+/* ========================= */
 
 .nav-center {
     flex: 1;
@@ -65,10 +81,13 @@ body {
     justify-content: center;
 }
 
+/* ========================= */
 /* NAVIGATION LINKS */
+/* ========================= */
 
 .nav-links {
     display: flex;
+
     gap: 25px;
 }
 
@@ -76,6 +95,7 @@ body {
     text-decoration: none;
 
     color: black;
+
     background-color: lightgray;
 
     padding: 14px 26px;
@@ -102,11 +122,36 @@ body {
 }
 
 /* ========================= */
+/* APPLICATION BUTTON */
+/* ========================= */
+
+.apply-button a {
+    text-decoration: none;
+
+    color: black;
+
+    background-color: lightgray;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.apply-button a:hover {
+    background-color: white;
+}
+
+/* ========================= */
 /* MAIN LAYOUT */
 /* ========================= */
 
 .main-container {
     display: flex;
+
     min-height: 100vh;
 }
 
@@ -126,7 +171,9 @@ body {
     border-right: 2px solid black;
 }
 
+/* ========================= */
 /* PAGE CIRCLE */
+/* ========================= */
 
 .page-circle {
     width: 120px;
@@ -155,13 +202,17 @@ body {
     transform: scale(1.05);
 }
 
+/* ========================= */
 /* SIDEBAR HEADINGS */
+/* ========================= */
 
 .sidebar h2 {
     margin-bottom: 25px;
 }
 
+/* ========================= */
 /* SIDEBAR LIST */
+/* ========================= */
 
 .sidebar ul {
     padding-left: 20px;
@@ -175,6 +226,7 @@ body {
 
 .sidebar li:hover {
     color: lightgray;
+
     transform: translateX(5px);
 }
 
@@ -184,6 +236,8 @@ body {
 
 .content {
     flex: 1;
+
+    min-width: 0;
 
     background: linear-gradient(
         lightgray,
@@ -196,7 +250,9 @@ body {
     text-align: center;
 }
 
+/* ========================= */
 /* PAGE TITLE */
+/* ========================= */
 
 .content h1 {
     font-size: 55px;
@@ -206,7 +262,9 @@ body {
     color: black;
 }
 
+/* ========================= */
 /* PAGE DESCRIPTION */
+/* ========================= */
 
 .content p {
     font-size: 19px;
@@ -228,7 +286,9 @@ body {
     margin-top: 80px;
 }
 
+/* ========================= */
 /* SECTION TITLES */
+/* ========================= */
 
 .team-section h2 {
     font-size: 38px;
@@ -280,7 +340,9 @@ body {
     box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
 
+/* ========================= */
 /* PROFILE IMAGE */
+/* ========================= */
 
 .profile-image {
     width: 130px;
@@ -296,15 +358,21 @@ body {
     border: 4px solid #3b3b3b;
 }
 
+/* ========================= */
 /* TEAM MEMBER NAME */
+/* ========================= */
 
 .team-card h2 {
     margin-bottom: 10px;
 
+    font-size: 22px;
+
     color: black;
 }
 
+/* ========================= */
 /* JOB ROLE */
+/* ========================= */
 
 .job-role {
     font-weight: bold;
@@ -316,7 +384,9 @@ body {
     font-size: 17px;
 }
 
+/* ========================= */
 /* DESCRIPTION */
+/* ========================= */
 
 .description {
     font-size: 15px;
@@ -354,18 +424,30 @@ body {
 
     .sidebar {
         width: auto;
+
         border-right: none;
+
         border-bottom: 2px solid black;
     }
 
     .navbar {
         flex-direction: column;
+
         gap: 20px;
+    }
+
+    .nav-center {
+        width: 100%;
     }
 
     .nav-links {
         flex-wrap: wrap;
+
         justify-content: center;
+    }
+
+    .content {
+        padding: 30px;
     }
 
 }
