@@ -1,0 +1,382 @@
+/* ========================= */
+/* ABOUT PAGE STYLE SHEET */
+/* ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+/* ========================= */
+/* MAIN ABOUT CONTAINER */
+/* ========================= */
+
+.about-container {
+    padding: 40px;
+}
+
+/* ========================= */
+/* ABOUT HEADER */
+/* ========================= */
+
+.about-header {
+    background-color: #3b3b3b;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 2px solid black;
+
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.about-header p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    color: lightgray;
+}
+
+/* ========================= */
+/* ABOUT CONTENT SECTION */
+/* ========================= */
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        lightgray,
+        gray,
+        black
+    );
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border: 2px solid black;
+
+    margin-bottom: 50px;
+}
+
+/* ========================= */
+/* ABOUT IMAGE */
+/* ========================= */
+
+.about-image img {
+    width: 350px;
+    max-width: 100%;
+
+    border-radius: 15px;
+
+    border: 3px solid black;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+/* ========================= */
+/* ABOUT TEXT */
+/* ========================= */
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+
+    color: black;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+/* ========================= */
+/* CONTACT BUTTON */
+/* ========================= */
+
+.about-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: #3b3b3b;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #1f1f1f;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* INFORMATION GRID */
+/* ========================= */
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+/* ========================= */
+/* INFO CARDS */
+/* ========================= */
+
+.info-card {
+    background-color: white;
+
+    width: 260px;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    color: black;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: scale(1.03);
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    line-height: 1.6;
+}
+
+/* ========================= */
+/* STATS SECTION */
+/* ========================= */
+
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+/* ========================= */
+/* STAT BOXES */
+/* ========================= */
+
+.stat-box {
+    background-color: #3b3b3b;
+
+    width: 220px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 2px solid black;
+
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: lightgray;
+}
+
+/* ========================= */
+/* WHY US SECTION */
+/* ========================= */
+
+.why-us-section {
+    background-color: #252525;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border: 2px solid black;
+
+    margin-bottom: 50px;
+}
+
+.why-us-section h2 {
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 40px;
+}
+
+/* ========================= */
+/* WHY US GRID */
+/* ========================= */
+
+.why-us-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+/* ========================= */
+/* WHY CARDS */
+/* ========================= */
+
+.why-card {
+    background-color: white;
+
+    width: 260px;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    color: black;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: scale(1.03);
+}
+
+.why-card h3 {
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    line-height: 1.6;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background-color: #1f1f1f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 2px solid black;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        color: black;
+    }
+
+    .about-header h1 {
+        font-size: 40px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .why-us-section h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-header,
+    .about-content,
+    .why-us-section {
+        padding: 25px;
+    }
+
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .about-header p,
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .info-card,
+    .why-card,
+    .stat-box {
+        width: 100%;
+    }
+}
