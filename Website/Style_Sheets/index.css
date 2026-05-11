@@ -1,9 +1,27 @@
-/* Home Page Style Sheet */
+/* ========================= */
+/* HOME PAGE STYLE SHEET */
+/* ========================= */
+
+/* GENERAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
+
     background-color: #2d2d2d;
+}
+
+/* REMOVE DEFAULT LINK STYLING */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
 }
 
 /* ========================= */
@@ -47,7 +65,9 @@ body {
     transform: scale(1.05) rotate(3deg);
 }
 
+/* ========================= */
 /* CENTER NAVIGATION */
+/* ========================= */
 
 .nav-center {
     flex: 1;
@@ -56,10 +76,13 @@ body {
     justify-content: center;
 }
 
+/* ========================= */
 /* NAVIGATION LINKS */
+/* ========================= */
 
 .nav-links {
     display: flex;
+
     gap: 25px;
 }
 
@@ -67,6 +90,7 @@ body {
     text-decoration: none;
 
     color: black;
+
     background-color: lightgray;
 
     padding: 14px 28px;
@@ -80,15 +104,19 @@ body {
 
 .nav-links a:hover {
     background-color: white;
+
     transform: translateY(-2px);
 }
 
+/* ========================= */
 /* APPLICATION BUTTON */
+/* ========================= */
 
 .apply-button a {
     text-decoration: none;
 
     color: black;
+
     background-color: lightgray;
 
     padding: 14px 24px;
@@ -102,6 +130,8 @@ body {
 
 .apply-button a:hover {
     background-color: white;
+
+    transform: translateY(-2px);
 }
 
 /* ========================= */
@@ -110,6 +140,7 @@ body {
 
 .main-container {
     display: flex;
+
     min-height: 700px;
 }
 
@@ -118,9 +149,10 @@ body {
 /* ========================= */
 
 .sidebar {
-    width: 250px;
+    width: 260px;
 
     background-color: #252525;
+
     color: white;
 
     padding: 25px;
@@ -128,27 +160,29 @@ body {
     border-right: 2px solid black;
 }
 
+/* ========================= */
 /* PAGE CIRCLE */
+/* ========================= */
 
 .page-circle {
     width: 120px;
     height: 120px;
 
     background-color: lightgray;
+
     border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: 0 auto 30px auto;
-
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
-/* PAGE ICON IMAGE */
+/* ========================= */
+/* PAGE ICON */
+/* ========================= */
 
 .page-icon {
     width: 70px;
@@ -157,14 +191,54 @@ body {
     object-fit: contain;
 }
 
-/* SIDEBAR LISTS */
+/* ========================= */
+/* SIDEBAR TITLE */
+/* ========================= */
+
+.sidebar h2 {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+/* ========================= */
+/* SIDEBAR LIST */
+/* ========================= */
 
 .sidebar ul {
     padding-left: 20px;
 }
 
+/* LIST ITEMS */
+
 .sidebar li {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+/* SIDEBAR LINKS */
+
+.sidebar li a {
+    display: inline-block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* BULGING HOVER EFFECT */
+
+.sidebar li a:hover {
+    color: lightgray;
+
+    transform: translateX(8px) scale(1.05);
+
+    text-shadow:
+        0px 0px 6px rgba(255,255,255,0.4),
+        0px 0px 12px rgba(255,255,255,0.2);
 }
 
 /* ========================= */
@@ -192,20 +266,32 @@ body {
     padding: 40px;
 }
 
-/* PAGE TITLES */
+/* ========================= */
+/* PAGE TITLE */
+/* ========================= */
 
 .content h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 65px;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 1px;
 }
 
+/* ========================= */
 /* PARAGRAPHS */
+/* ========================= */
 
 .content p {
     max-width: 700px;
 
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
 }
 
 /* ========================= */
@@ -213,107 +299,31 @@ body {
 /* ========================= */
 
 .join-button {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .join-button a {
     text-decoration: none;
 
     background-color: #3b3b3b;
+
     color: white;
 
-    padding: 15px 30px;
+    padding: 16px 32px;
 
     border-radius: 10px;
 
     font-size: 18px;
+
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
 .join-button a:hover {
     background-color: #1f1f1f;
+
     transform: scale(1.05);
-}
-
-/* ========================= */
-/* TEAM PAGE STYLING */
-/* ========================= */
-
-/* TEAM SECTIONS */
-
-.team-section {
-    margin-top: 60px;
-}
-
-.team-section h2 {
-    font-size: 35px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-/* TEAM CONTAINER */
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    margin-top: 40px;
-}
-
-/* TEAM CARDS */
-
-.team-card {
-    background-color: white;
-
-    width: 250px;
-
-    border-radius: 15px;
-
-    padding: 20px;
-
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
-
-    transition: 0.3s;
-}
-
-.team-card:hover {
-    transform: scale(1.03);
-}
-
-/* PROFILE IMAGE PLACEHOLDER */
-
-.profile-image {
-    width: 120px;
-    height: 120px;
-
-    background-color: lightgray;
-
-    border-radius: 50%;
-
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-/* TEAM MEMBER TEXT */
-
-.team-card h2 {
-    margin-bottom: 10px;
-}
-
-.job-role {
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 15px;
-}
-
-.description {
-    font-size: 15px;
-    line-height: 1.5;
 }
 
 /* ========================= */
@@ -330,4 +340,43 @@ body {
     padding: 20px;
 
     border-top: 2px solid black;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 2px solid black;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
 }
