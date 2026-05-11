@@ -3,41 +3,13 @@
 
 <head>
 
-    <!-- ========================= -->
-    <!-- META DATA -->
-    <!-- ========================= -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | Hot Beans</title>
+    <title>Hot Beans Web | About Us</title>
 
-    <meta
-        name="description"
-        content="Learn more about Hot Beans Web, our mission, our team, and our passion for modern web development.">
-
-    <meta
-        name="keywords"
-        content="Hot Beans, Web Development, Web Design, Developers, Careers, HTML, CSS">
-
-    <meta
-        name="author"
-        content="Hot Beans Web">
-
-    <!-- ========================= -->
-    <!-- STYLE SHEET -->
-    <!-- ========================= -->
-
+    <!-- CSS FILE -->
     <link rel="stylesheet" href="style_sheets/about.css">
-
-    <!-- ========================= -->
-    <!-- FAVICON -->
-    <!-- ========================= -->
-
-    <link
-        rel="icon"
-        type="image/png"
-        href="images/favicon.png">
 
 </head>
 
@@ -53,7 +25,9 @@
 
         <a href="index.html" class="logo">
 
-            <img src="images/HotBeansLogo.png" alt="Hot Beans Web Logo">
+            <img
+                src="images/HotBeansLogo.png"
+                alt="Hot Beans Web Logo">
 
         </a>
 
@@ -63,17 +37,11 @@
 
             <div class="nav-links">
 
-                <a href="index.html">
-                    Home
-                </a>
+                <a href="index.html">Home</a>
 
-                <a href="team.html">
-                    Meet the Team
-                </a>
+                <a href="team.html">Meet the Team</a>
 
-                <a href="courses.html">
-                    Courses
-                </a>
+                <a href="courses.html">Courses</a>
 
                 <a href="about.html" class="active">
                     About Us
@@ -96,7 +64,7 @@
     </nav>
 
     <!-- ========================= -->
-    <!-- MAIN LAYOUT -->
+    <!-- MAIN CONTAINER -->
     <!-- ========================= -->
 
     <div class="main-container">
@@ -107,52 +75,52 @@
 
         <aside class="sidebar">
 
+            <!-- PAGE ICON -->
+
             <div class="page-circle">
 
                 <img
-                    src="images/Icons/InfoIcon.png"
+                    src="images/Icons/AboutIcon.png"
                     alt="About Icon"
                     class="page-icon">
 
             </div>
 
-            <h2>Page Contents</h2>
+            <!-- SIDEBAR TITLE -->
+
+            <h2>Page Navigation</h2>
+
+            <!-- SIDEBAR LINKS -->
 
             <ul>
 
                 <li>
-                    <a href="#about-header">
+                    <a href="#introduction">
                         Introduction
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about-content">
-                        Who We Are
+                    <a href="#company">
+                        Company Overview
                     </a>
                 </li>
 
                 <li>
-                    <a href="#info-grid">
-                        Company Information
+                    <a href="#mission">
+                        Our Mission
                     </a>
                 </li>
 
                 <li>
-                    <a href="#stats-section">
-                        Company Statistics
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#why-us-section">
+                    <a href="#why-us">
                         Why Choose Us
                     </a>
                 </li>
 
                 <li>
-                    <a href="contact.html">
-                        Contact Us
+                    <a href="#contact">
+                        Contact Information
                     </a>
                 </li>
 
@@ -161,205 +129,82 @@
         </aside>
 
         <!-- ========================= -->
-        <!-- ABOUT MAIN CONTENT -->
+        <!-- MAIN CONTENT -->
         <!-- ========================= -->
 
         <main class="content">
 
             <!-- ========================= -->
-            <!-- ABOUT HEADER -->
+            <!-- INTRODUCTION -->
             <!-- ========================= -->
 
             <section
-                class="about-header"
-                id="about-header">
+                class="about-section"
+                id="introduction">
 
-                <h1>About Hot Beans</h1>
+                <h1>About Hot Beans Web</h1>
 
                 <p>
-                    At Hot Beans, we specialise in modern web development,
-                    creative digital solutions, and helping future developers
-                    gain real industry experience.
+                    Hot Beans Web is a modern web development company
+                    dedicated to helping businesses and individuals
+                    create high-quality digital experiences.
+                </p>
+
+                <p>
+                    We focus on responsive design, accessibility,
+                    creative solutions, and helping future developers
+                    gain valuable industry experience.
                 </p>
 
             </section>
 
             <!-- ========================= -->
-            <!-- ABOUT CONTENT -->
+            <!-- COMPANY OVERVIEW -->
             <!-- ========================= -->
 
             <section
-                class="about-content"
-                id="about-content">
+                class="info-card"
+                id="company">
 
-                <!-- COMPANY IMAGE -->
+                <h2>Company Overview</h2>
 
-                <div class="about-image">
+                <p>
+                    Founded with a passion for innovation,
+                    Hot Beans Web specialises in website design,
+                    front-end development, backend systems,
+                    and user-focused experiences.
+                </p>
 
-                    <img
-                        src="images/BoardMeeting.jpg"
-                        alt="The Hot Beans development team working together"
-                        loading="lazy">
-
-                </div>
-
-                <!-- COMPANY TEXT -->
-
-                <div class="about-text">
-
-                    <h2>Who We Are</h2>
-
-                    <p>
-                        Hot Beans Web is a growing web development company
-                        dedicated to building responsive, modern, and accessible
-                        websites for businesses and organisations across the UK.
-                    </p>
-
-                    <p>
-                        Our team is made up of talented designers,
-                        developers, and digital creators who are passionate
-                        about technology and innovation.
-                    </p>
-
-                    <p>
-                        We believe that great websites should not only
-                        look good, but also perform smoothly and provide
-                        excellent user experiences.
-                    </p>
-
-                    <!-- CONTACT BUTTON -->
-
-                    <a
-                        href="contact.html"
-                        class="about-btn">
-
-                        Contact Us
-
-                    </a>
-
-                </div>
+                <p>
+                    Our team works closely with clients to build
+                    professional websites that are modern,
+                    responsive, and tailored to business needs.
+                </p>
 
             </section>
 
             <!-- ========================= -->
-            <!-- INFORMATION CARDS -->
+            <!-- OUR MISSION -->
             <!-- ========================= -->
 
             <section
-                class="info-grid"
-                id="info-grid">
+                class="info-card"
+                id="mission">
 
-                <!-- CARD 1 -->
+                <h2>Our Mission</h2>
 
-                <div class="info-card">
+                <p>
+                    Our goal is to create high-quality digital
+                    products while supporting the next generation
+                    of web developers through training and
+                    real-world experience.
+                </p>
 
-                    <h3>Our Mission</h3>
-
-                    <p>
-                        To create modern, user-friendly websites while
-                        helping future developers gain valuable industry
-                        experience.
-                    </p>
-
-                </div>
-
-                <!-- CARD 2 -->
-
-                <div class="info-card">
-
-                    <h3>Our Team</h3>
-
-                    <p>
-                        Our experienced developers combine creativity,
-                        technical skill, and innovation to deliver
-                        high-quality websites.
-                    </p>
-
-                </div>
-
-                <!-- CARD 3 -->
-
-                <div class="info-card">
-
-                    <h3>Career Opportunities</h3>
-
-                    <p>
-                        We regularly welcome junior developers and students
-                        looking to begin careers in web development.
-                    </p>
-
-                </div>
-
-                <!-- CARD 4 -->
-
-                <div class="info-card">
-
-                    <h3>What We Do</h3>
-
-                    <p>
-                        From responsive websites to interactive interfaces,
-                        we develop digital products designed for modern users.
-                    </p>
-
-                </div>
-
-            </section>
-
-            <!-- ========================= -->
-            <!-- COMPANY STATS -->
-            <!-- ========================= -->
-
-            <section
-                class="stats-section"
-                id="stats-section">
-
-                <!-- STAT BOX 1 -->
-
-                <div class="stat-box">
-
-                    <h2>50+</h2>
-
-                    <p>
-                        Projects Completed
-                    </p>
-
-                </div>
-
-                <!-- STAT BOX 2 -->
-
-                <div class="stat-box">
-
-                    <h2>15+</h2>
-
-                    <p>
-                        Professional Developers
-                    </p>
-
-                </div>
-
-                <!-- STAT BOX 3 -->
-
-                <div class="stat-box">
-
-                    <h2>10+</h2>
-
-                    <p>
-                        Junior Developers Trained
-                    </p>
-
-                </div>
-
-                <!-- STAT BOX 4 -->
-
-                <div class="stat-box">
-
-                    <h2>100%</h2>
-
-                    <p>
-                        Passion For Technology
-                    </p>
-
-                </div>
+                <p>
+                    We believe that creativity, teamwork,
+                    and innovation are key to building
+                    successful websites and careers.
+                </p>
 
             </section>
 
@@ -368,51 +213,77 @@
             <!-- ========================= -->
 
             <section
-                class="why-us-section"
-                id="why-us-section">
+                class="info-card"
+                id="why-us">
 
-                <h2>Why Choose Hot Beans?</h2>
+                <h2>Why Choose Hot Beans Web?</h2>
 
-                <div class="why-us-grid">
+                <div class="feature-grid">
 
-                    <!-- CARD 1 -->
-
-                    <div class="why-card">
+                    <div class="feature-box">
 
                         <h3>Modern Design</h3>
 
                         <p>
-                            We create visually appealing websites
-                            designed for modern users and devices.
+                            We build stylish, responsive,
+                            and accessible websites.
                         </p>
 
                     </div>
 
-                    <!-- CARD 2 -->
+                    <div class="feature-box">
 
-                    <div class="why-card">
-
-                        <h3>Responsive Layouts</h3>
+                        <h3>Professional Team</h3>
 
                         <p>
-                            Every website we develop works smoothly
-                            across desktops, tablets, and mobile devices.
+                            Our experienced developers work
+                            together to create quality solutions.
                         </p>
 
                     </div>
 
-                    <!-- CARD 3 -->
+                    <div class="feature-box">
 
-                    <div class="why-card">
-
-                        <h3>Real Industry Experience</h3>
+                        <h3>Training Opportunities</h3>
 
                         <p>
-                            We help young developers gain practical
-                            experience through real-world projects.
+                            We help trainee developers gain
+                            real industry experience.
                         </p>
 
                     </div>
+
+                </div>
+
+            </section>
+
+            <!-- ========================= -->
+            <!-- CONTACT SECTION -->
+            <!-- ========================= -->
+
+            <section
+                class="info-card"
+                id="contact">
+
+                <h2>Contact Information</h2>
+
+                <p>
+                    Interested in joining our team or learning more?
+                </p>
+
+                <p>
+                    Email: contact@hotbeansweb.co.uk
+                </p>
+
+                <p>
+                    Phone: 01234 567890
+                </p>
+
+                <div class="join-button">
+
+                    <a href="apply.html">
+                        Apply Today
+                    </a>
 
                 </div>
 
