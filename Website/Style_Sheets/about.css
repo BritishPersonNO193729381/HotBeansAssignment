@@ -9,7 +9,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* SMOOTH SCROLLING FOR EASE OF ACCESS (and also since ik sams gunna review the website lol) */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     color: white;
 }
 
-/* REMOVE DEFAULT LINK COLOURS (Im not fancy...) */
+/* REMOVE DEFAULT LINK COLOURS */
 
 a {
     color: inherit;
@@ -69,7 +69,9 @@ a {
     transform: scale(1.05) rotate(3deg);
 }
 
+/* ========================= */
 /* CENTER NAVIGATION */
+/* ========================= */
 
 .nav-center {
     flex: 1;
@@ -78,10 +80,13 @@ a {
     justify-content: center;
 }
 
+/* ========================= */
 /* NAVIGATION LINKS */
+/* ========================= */
 
 .nav-links {
     display: flex;
+
     gap: 25px;
 }
 
@@ -107,7 +112,15 @@ a {
     transform: translateY(-2px);
 }
 
+/* ACTIVE PAGE BUTTON */
+
+.nav-links .active {
+    background-color: white;
+}
+
+/* ========================= */
 /* APPLICATION BUTTON */
+/* ========================= */
 
 .apply-button a {
     text-decoration: none;
@@ -127,14 +140,103 @@ a {
 
 .apply-button a:hover {
     background-color: white;
+
+    transform: translateY(-2px);
 }
 
 /* ========================= */
-/* MAIN ABOUT CONTAINER */
+/* MAIN LAYOUT */
+/* ========================= */
+
+.main-container {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.sidebar {
+    width: 260px;
+
+    background-color: #252525;
+
+    color: white;
+
+    padding: 25px;
+
+    border-right: 2px solid black;
+}
+
+/* PAGE CIRCLE */
+
+.page-circle {
+    width: 120px;
+    height: 120px;
+
+    background-color: lightgray;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* PAGE ICON */
+
+.page-icon {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
+/* SIDEBAR TITLES */
+
+.sidebar h2 {
+    margin-bottom: 25px;
+
+    font-size: 32px;
+}
+
+/* SIDEBAR LIST */
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    color: lightgray;
+
+    transform: translateX(5px);
+}
+
+/* ========================= */
+/* ABOUT CONTAINER */
 /* ========================= */
 
 .about-container {
+    flex: 1;
+
     padding: 40px;
+
+    background: linear-gradient(
+        lightgray,
+        gray,
+        black
+    );
 }
 
 /* ========================= */
@@ -186,11 +288,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(
-        lightgray,
-        gray,
-        black
-    );
+    background-color: rgba(255,255,255,0.15);
 
     padding: 40px;
 
@@ -459,6 +557,28 @@ a {
 /* ========================= */
 /* RESPONSIVE DESIGN */
 /* ========================= */
+
+@media (max-width: 1100px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    .sidebar ul {
+        text-align: center;
+
+        list-style-position: inside;
+
+        padding-left: 0;
+    }
+}
 
 @media (max-width: 1000px) {
 
