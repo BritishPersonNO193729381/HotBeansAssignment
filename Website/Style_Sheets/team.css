@@ -194,6 +194,15 @@ body {
     transition: 0.3s;
 }
 
+/* PAGE ICON IMAGE */
+
+.page-icon {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
 .page-circle:hover {
     transform: scale(1.05);
 }
