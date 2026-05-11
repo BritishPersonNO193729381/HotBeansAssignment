@@ -148,6 +148,15 @@ body {
     font-size: 20px;
 }
 
+/* PAGE ICON IMAGE */
+
+.page-icon {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
 /* SIDEBAR LISTS */
 
 .sidebar ul {
