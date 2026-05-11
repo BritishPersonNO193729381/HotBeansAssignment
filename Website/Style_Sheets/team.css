@@ -171,27 +171,24 @@ body {
 /* PAGE CIRCLE */
 /* ========================= */
 
+/* PAGE CIRCLE */
+
 .page-circle {
     width: 120px;
     height: 120px;
 
     background-color: lightgray;
-
     border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: auto;
-    margin-bottom: 35px;
+    margin: 0 auto 30px auto;
 
     color: black;
-
     font-weight: bold;
-    font-size: 22px;
-
-    transition: 0.3s;
+    font-size: 20px;
 }
 
 /* PAGE ICON IMAGE */
