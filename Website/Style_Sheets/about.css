@@ -2,7 +2,17 @@
 /* ABOUT PAGE STYLE SHEET */
 /* ========================= */
 
-/* GENERAL PAGE STYLING */
+/* ========================= */
+/* GENERAL SETTINGS */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -14,9 +24,11 @@ body {
     color: white;
 }
 
-/* REMOVE DEFAULT LINK COLOURS */
+/* REMOVE DEFAULT LINK STYLING */
 
 a {
+    text-decoration: none;
+
     color: inherit;
 }
 
@@ -88,12 +100,11 @@ a {
 }
 
 .nav-links a {
-    text-decoration: none;
-
     color: black;
+
     background-color: lightgray;
 
-    padding: 14px 26px;
+    padding: 14px 28px;
 
     border-radius: 10px;
 
@@ -105,12 +116,10 @@ a {
 .nav-links a:hover {
     background-color: white;
 
-    transform: translateY(-3px);
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
 
-/* ACTIVE PAGE BUTTON */
+/* ACTIVE PAGE */
 
 .nav-links .active {
     background-color: white;
@@ -121,9 +130,8 @@ a {
 /* ========================= */
 
 .apply-button a {
-    text-decoration: none;
-
     color: black;
+
     background-color: lightgray;
 
     padding: 14px 24px;
@@ -138,9 +146,7 @@ a {
 .apply-button a:hover {
     background-color: white;
 
-    transform: translateY(-3px);
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
 
 /* ========================= */
@@ -158,13 +164,17 @@ a {
 /* ========================= */
 
 .sidebar {
-    width: 250px;
+    width: 260px;
 
     background-color: #252525;
+
+    color: white;
 
     padding: 25px;
 
     border-right: 2px solid black;
+
+    flex-shrink: 0;
 }
 
 /* ========================= */
@@ -183,10 +193,19 @@ a {
     justify-content: center;
     align-items: center;
 
-    margin: 0 auto 30px auto;
+    margin: auto;
+    margin-bottom: 30px;
+
+    transition: 0.3s;
 }
 
+.page-circle:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
 /* PAGE ICON */
+/* ========================= */
 
 .page-icon {
     width: 70px;
@@ -196,24 +215,26 @@ a {
 }
 
 /* ========================= */
-/* SIDEBAR TEXT */
+/* SIDEBAR TITLE */
 /* ========================= */
 
 .sidebar h2 {
+    font-size: 28px;
+
     margin-bottom: 25px;
 
-    font-size: 32px;
-
-    color: white;
-
-    text-shadow:
-        0px 0px 5px rgba(255,255,255,0.3),
-        0px 0px 10px rgba(255,255,255,0.2);
+    text-align: center;
 }
+
+/* ========================= */
+/* SIDEBAR LIST */
+/* ========================= */
 
 .sidebar ul {
     padding-left: 20px;
 }
+
+/* LIST ITEMS */
 
 .sidebar li {
     margin-bottom: 18px;
@@ -221,22 +242,24 @@ a {
     transition: 0.3s;
 }
 
-.sidebar li:hover {
-    color: lightgray;
-
-    transform: translateX(5px);
-}
-
 /* SIDEBAR LINKS */
 
-.sidebar a {
-    text-decoration: none;
+.sidebar li a {
+    display: inline-block;
+
+    font-size: 18px;
+
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
-.sidebar a:hover {
+/* HOVER EFFECT */
+
+.sidebar li a:hover {
     color: lightgray;
+
+    transform: translateX(8px) scale(1.05);
 
     text-shadow:
         0px 0px 6px rgba(255,255,255,0.4),
@@ -244,10 +267,10 @@ a {
 }
 
 /* ========================= */
-/* ABOUT CONTAINER */
+/* MAIN CONTENT */
 /* ========================= */
 
-.about-container {
+.content {
     flex: 1;
 
     background: linear-gradient(
@@ -256,324 +279,213 @@ a {
         black
     );
 
-    padding: 50px;
-
-    text-align: center;
-}
-
-/* ========================= */
-/* ABOUT HEADER */
-/* ========================= */
-
-.about-header {
-    margin-bottom: 60px;
-}
-
-.about-header h1 {
-    font-size: 55px;
-
-    margin-bottom: 20px;
+    padding: 60px 50px;
 
     color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-header p {
-    font-size: 19px;
+/* ========================= */
+/* ABOUT SECTION */
+/* ========================= */
 
-    max-width: 900px;
+.about-section {
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    width: 100%;
+}
+
+.about-section h1 {
+    font-size: 65px;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 1px;
+}
+
+.about-section p {
+    max-width: 850px;
 
     margin: auto;
+    margin-bottom: 25px;
 
-    line-height: 1.7;
+    font-size: 22px;
 
-    color: black;
-}
-
-/* ========================= */
-/* ABOUT CONTENT */
-/* ========================= */
-
-.about-content {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 40px;
-
-    margin-bottom: 60px;
-}
-
-/* ========================= */
-/* ABOUT IMAGE */
-/* ========================= */
-
-.about-image img {
-    width: 350px;
-
-    max-width: 100%;
-
-    border-radius: 18px;
-
-    border: 3px solid black;
-
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
-
-    object-fit: cover;
-}
-
-/* ========================= */
-/* ABOUT TEXT CARD */
-/* ========================= */
-
-.about-text {
-    background-color: white;
-
-    max-width: 600px;
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
-
-    transition: 0.3s;
-
-    color: black;
-
-    text-align: center;
-}
-
-.about-text:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-}
-
-.about-text h2 {
-    font-size: 38px;
-
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    margin-bottom: 20px;
-}
-
-/* ========================= */
-/* CONTACT BUTTON */
-/* ========================= */
-
-.about-btn {
-    text-decoration: none;
-
-    background-color: #3b3b3b;
-
-    color: white;
-
-    padding: 14px 26px;
-
-    border-radius: 10px;
-
-    display: inline-block;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.about-btn:hover {
-    background-color: #1f1f1f;
-
-    transform: scale(1.05);
-}
-
-/* ========================= */
-/* INFORMATION GRID */
-/* ========================= */
-
-.info-grid {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 35px;
-
-    margin-bottom: 60px;
+    line-height: 1.8;
 }
 
 /* ========================= */
 /* INFO CARDS */
 /* ========================= */
 
+/*
+    WIDTH REDUCED SAFELY
+
+    Old layout:
+    Very wide cards filling most of screen
+
+    New layout:
+    50% smaller visual footprint
+    while still remaining responsive
+*/
+
 .info-card {
-    background-color: white;
+    background-color: rgba(255,255,255,0.92);
 
-    width: 280px;
+    width: 50%;
 
-    border-radius: 18px;
+    min-width: 420px;
 
-    padding: 25px;
+    max-width: 650px;
 
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+    border-radius: 20px;
+
+    padding: 40px;
+
+    margin-bottom: 50px;
+
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
 
     transition: 0.3s;
-
-    color: black;
-
-    text-align: center;
 }
 
 .info-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.45);
 }
 
-.info-card h3 {
-    font-size: 24px;
+/* CARD TITLES */
 
-    margin-bottom: 15px;
+.info-card h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: black;
 }
+
+/* CARD PARAGRAPHS */
 
 .info-card p {
-    line-height: 1.7;
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #222;
 }
 
 /* ========================= */
-/* STATS SECTION */
+/* FEATURE GRID */
 /* ========================= */
 
-.stats-section {
+.feature-grid {
     display: flex;
 
     flex-wrap: wrap;
 
     justify-content: center;
 
-    gap: 35px;
+    gap: 25px;
 
-    margin-bottom: 60px;
+    margin-top: 35px;
 }
 
 /* ========================= */
-/* STAT BOXES */
+/* FEATURE BOXES */
 /* ========================= */
 
-.stat-box {
+/*
+    Reduced size safely
+*/
+
+.feature-box {
     background-color: white;
 
-    width: 240px;
+    width: 140px;
+
+    min-height: 220px;
 
     border-radius: 18px;
 
-    padding: 30px;
+    padding: 20px;
 
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+    text-align: center;
+
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.3);
 
     transition: 0.3s;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+}
+
+.feature-box h3 {
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
     color: black;
+}
 
+.feature-box p {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #333;
+}
+
+/* ========================= */
+/* APPLY BUTTON */
+/* ========================= */
+
+.join-button {
     text-align: center;
+
+    margin-top: 30px;
 }
 
-.stat-box:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-}
-
-.stat-box h2 {
-    font-size: 42px;
-
-    margin-bottom: 10px;
-}
-
-.stat-box p {
-    font-size: 17px;
-
-    line-height: 1.6;
-}
-
-/* ========================= */
-/* WHY US SECTION */
-/* ========================= */
-
-.why-us-section {
-    margin-bottom: 50px;
-}
-
-.why-us-section h2 {
-    font-size: 50px;
-
-    margin-bottom: 40px;
+.join-button a {
+    background-color: #3b3b3b;
 
     color: white;
 
-    text-shadow:
-        0px 0px 8px rgba(255,255,255,0.4),
-        0px 0px 15px rgba(255,255,255,0.2);
-}
+    padding: 16px 32px;
 
-/* ========================= */
-/* WHY US GRID */
-/* ========================= */
+    border-radius: 10px;
 
-.why-us-grid {
-    display: flex;
+    font-size: 18px;
 
-    flex-wrap: wrap;
+    font-weight: bold;
 
-    justify-content: center;
-
-    gap: 35px;
-}
-
-/* ========================= */
-/* WHY CARDS */
-/* ========================= */
-
-.why-card {
-    background-color: white;
-
-    width: 280px;
-
-    border-radius: 18px;
-
-    padding: 25px;
-
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+    display: inline-block;
 
     transition: 0.3s;
-
-    color: black;
-
-    text-align: center;
 }
 
-.why-card:hover {
-    transform: translateY(-8px);
+.join-button a:hover {
+    background-color: #1f1f1f;
 
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-}
-
-.why-card h3 {
-    font-size: 24px;
-
-    margin-bottom: 15px;
-}
-
-.why-card p {
-    line-height: 1.7;
+    transform: scale(1.05);
 }
 
 /* ========================= */
@@ -596,23 +508,16 @@ a {
 /* RESPONSIVE DESIGN */
 /* ========================= */
 
-@media screen and (max-width: 900px) {
-
-    .main-container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: auto;
-
-        border-right: none;
-        border-bottom: 2px solid black;
-    }
+@media screen and (max-width: 1000px) {
 
     .navbar {
         flex-direction: column;
 
         gap: 20px;
+    }
+
+    .nav-center {
+        width: 100%;
     }
 
     .nav-links {
@@ -621,19 +526,51 @@ a {
         justify-content: center;
     }
 
-    .about-content {
+    .main-container {
         flex-direction: column;
     }
 
-    .about-text,
-    .info-card,
-    .why-card,
-    .stat-box {
-        width: 90%;
+    .sidebar {
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 2px solid black;
     }
 
-    .about-header h1,
-    .why-us-section h2 {
-        font-size: 40px;
+    .sidebar h2 {
+        text-align: center;
+    }
+
+    .content {
+        padding: 40px 25px;
+    }
+
+    .about-section h1 {
+        font-size: 48px;
+    }
+
+    .about-section p {
+        font-size: 18px;
+    }
+
+    .info-card {
+        width: 90%;
+
+        min-width: unset;
+    }
+
+    .info-card h2 {
+        font-size: 34px;
+    }
+
+    .info-card p {
+        font-size: 17px;
+    }
+
+    .feature-box {
+        width: 100%;
+
+        min-height: unset;
     }
 }
