@@ -236,20 +236,46 @@ body {
 /* MAIN CONTENT */
 /* ========================= */
 
-.content {
-    flex: 1;
+/* ========================= */
+/* ABOUT HEADER */
+/* ========================= */
 
-    min-width: 0;
+.about-header {
+    background-color: transparent;
 
-    background: linear-gradient(
-        lightgray,
-        gray,
-        black
-    );
-
-    padding: 50px;
+    padding: 20px 20px 50px 20px;
 
     text-align: center;
+
+    margin-bottom: 40px;
+}
+
+/* PAGE TITLE */
+
+.about-header h1 {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+    color: black;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+/* PAGE DESCRIPTION */
+
+.about-header p {
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: black;
 }
 
 /* ========================= */
