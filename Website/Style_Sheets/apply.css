@@ -1,5 +1,5 @@
 /* ========================= */
-/* MEET THE TEAM STYLE SHEET */
+/* APPLY PAGE STYLE SHEET */
 /* ========================= */
 
 /* ========================= */
@@ -96,11 +96,9 @@ a {
 }
 
 .nav-links a {
-    text-decoration: none;
+    background-color: lightgray;
 
     color: black;
-
-    background-color: lightgray;
 
     padding: 14px 26px;
 
@@ -130,11 +128,9 @@ a {
 /* ========================= */
 
 .apply-button a {
-    text-decoration: none;
+    background-color: white;
 
     color: black;
-
-    background-color: lightgray;
 
     padding: 14px 24px;
 
@@ -146,9 +142,9 @@ a {
 }
 
 .apply-button a:hover {
-    background-color: white;
-
     transform: translateY(-2px);
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
 
 /* ========================= */
@@ -166,11 +162,9 @@ a {
 /* ========================= */
 
 .sidebar {
-    width: 220px;
+    width: 240px;
 
     background-color: #252525;
-
-    color: white;
 
     padding: 25px;
 
@@ -197,7 +191,7 @@ a {
 
     margin: 0 auto 30px auto;
 
-    transition: 0.3s;
+    overflow: hidden;
 }
 
 .page-circle:hover {
@@ -205,24 +199,26 @@ a {
 }
 
 /* ========================= */
-/* PAGE ICON */
+/* PAGE ICON IMAGE */
 /* ========================= */
 
 .page-icon {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
 
     object-fit: contain;
+
+    display: block;
 }
 
 /* ========================= */
-/* SIDEBAR HEADINGS */
+/* SIDEBAR TITLE */
 /* ========================= */
 
 .sidebar h2 {
     margin-bottom: 25px;
 
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* ========================= */
@@ -233,12 +229,8 @@ a {
     padding-left: 20px;
 }
 
-/* LIST ITEMS */
-
 .sidebar li {
     margin-bottom: 18px;
-
-    transition: 0.3s;
 }
 
 /* SIDEBAR LINKS */
@@ -253,12 +245,10 @@ a {
     transition: 0.3s;
 }
 
-/* HOVER EFFECT */
-
 .sidebar li a:hover {
     color: lightgray;
 
-    transform: translateX(8px) scale(1.03);
+    transform: translateX(8px);
 
     text-shadow:
         0px 0px 6px rgba(255,255,255,0.4),
@@ -278,7 +268,7 @@ a {
         black
     );
 
-    padding: 50px;
+    padding: 60px 40px;
 
     display: flex;
     flex-direction: column;
@@ -292,15 +282,11 @@ a {
 /* ========================= */
 
 .content h1 {
-    font-size: 65px;
-
-    font-weight: 900;
-
-    margin-bottom: 25px;
+    font-size: 60px;
 
     color: black;
 
-    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 /* ========================= */
@@ -310,148 +296,130 @@ a {
 .content p {
     max-width: 850px;
 
-    font-size: 22px;
-
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-
     color: black;
-}
-
-/* ========================= */
-/* TEAM SECTIONS */
-/* ========================= */
-
-.team-section {
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin-top: 80px;
-}
-
-/* ========================= */
-/* SECTION TITLES */
-/* ========================= */
-
-.team-section h2 {
-    font-size: 42px;
-
-    margin-bottom: 40px;
-
-    color: white;
-
-    text-transform: uppercase;
-
-    letter-spacing: 3px;
-
-    text-align: center;
-}
-
-/* ========================= */
-/* TEAM CONTAINER */
-/* ========================= */
-
-.team-container {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 30px;
-}
-
-/* ========================= */
-/* TEAM CARDS */
-/* ========================= */
-
-.team-card {
-    background-color: white;
-
-    width: 220px;
-
-    min-height: 420px;
-
-    border-radius: 18px;
-
-    padding: 25px;
-
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
-
-    transition: 0.3s;
-
-    color: black;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-}
-
-.team-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-}
-
-/* ========================= */
-/* PROFILE IMAGE */
-/* ========================= */
-
-.profile-image {
-    width: 120px;
-    height: 120px;
-
-    border-radius: 50%;
-
-    margin-bottom: 20px;
-
-    border: 4px solid #3b3b3b;
-
-    object-fit: cover;
-}
-
-/* ========================= */
-/* TEAM MEMBER NAME */
-/* ========================= */
-
-.team-card h2 {
-    margin-bottom: 12px;
 
     font-size: 20px;
 
-    line-height: 1.3;
+    line-height: 1.8;
+
+    margin-bottom: 50px;
+}
+
+/* ========================= */
+/* APPLICATION FORM */
+/* ========================= */
+
+.application-form {
+    width: 100%;
+    max-width: 850px;
+
+    background-color: rgba(255,255,255,0.92);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
 
     color: black;
+
+    text-align: left;
 }
 
-/* ========================= */
-/* JOB ROLE */
-/* ========================= */
+/* FORM GROUP */
 
-.job-role {
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* LABELS */
+
+.form-group label {
+    display: block;
+
     font-weight: bold;
 
-    color: #444;
+    margin-bottom: 10px;
 
-    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 2px solid #444;
 
     font-size: 16px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: black;
+
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+}
+
+/* TEXTAREA */
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 140px;
 }
 
 /* ========================= */
-/* DESCRIPTION */
+/* SUBMIT BUTTON */
 /* ========================= */
 
-.description {
-    font-size: 15px;
+.submit-button {
+    text-align: center;
 
-    line-height: 1.7;
+    margin-top: 35px;
+}
 
-    color: #333;
+.submit-button button {
+    background-color: #3b3b3b;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 40px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-button button:hover {
+    background-color: #1f1f1f;
+
+    transform: scale(1.05);
+
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
 }
 
 /* ========================= */
@@ -460,8 +428,6 @@ a {
 
 .footer {
     background-color: #1f1f1f;
-
-    color: white;
 
     text-align: center;
 
@@ -503,41 +469,29 @@ a {
     }
 
     .sidebar ul {
-        list-style-position: inside;
-
         padding-left: 0;
+
+        list-style-position: inside;
     }
 
     .content {
-        padding: 40px 25px;
+        padding: 40px 20px;
     }
 
     .content h1 {
-        font-size: 50px;
+        font-size: 46px;
     }
 
     .content p {
         font-size: 18px;
     }
 
-    .team-section h2 {
-        font-size: 34px;
+    .application-form {
+        padding: 30px 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
-
-    .content h1 {
-        font-size: 40px;
-    }
-
-    .team-card {
-        width: 100%;
-
-        max-width: 320px;
-
-        min-height: auto;
-    }
 
     .nav-links {
         gap: 15px;
@@ -546,5 +500,13 @@ a {
     .nav-links a,
     .apply-button a {
         padding: 12px 18px;
+    }
+
+    .content h1 {
+        font-size: 38px;
+    }
+
+    .submit-button button {
+        width: 100%;
     }
 }
