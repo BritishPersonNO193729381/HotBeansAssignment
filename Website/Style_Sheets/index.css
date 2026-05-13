@@ -10,9 +10,7 @@
 
 body {
     margin: 0;
-
     font-family: Arial, sans-serif;
-
     background-color: #2d2d2d;
 }
 
@@ -20,7 +18,6 @@ body {
 
 a {
     text-decoration: none;
-
     color: inherit;
 }
 
@@ -38,6 +35,9 @@ a {
     padding: 15px 25px;
 
     border-bottom: 2px solid black;
+
+    position: relative;
+    z-index: 2;
 }
 
 /* ========================= */
@@ -87,8 +87,6 @@ a {
 }
 
 .nav-links a {
-    text-decoration: none;
-
     color: black;
 
     background-color: lightgray;
@@ -113,8 +111,6 @@ a {
 /* ========================= */
 
 .apply-button a {
-    text-decoration: none;
-
     color: black;
 
     background-color: lightgray;
@@ -142,6 +138,9 @@ a {
     display: flex;
 
     min-height: 700px;
+
+    position: relative;
+    z-index: 2;
 }
 
 /* ========================= */
@@ -151,7 +150,7 @@ a {
 .sidebar {
     width: 260px;
 
-    background-color: #252525;
+    background-color: rgba(37, 37, 37, 0.88);
 
     color: white;
 
@@ -249,9 +248,9 @@ a {
     flex: 1;
 
     background: linear-gradient(
-        lightgray,
-        gray,
-        black
+        rgba(211,211,211,0.88),
+        rgba(128,128,128,0.88),
+        rgba(0,0,0,0.88)
     );
 
     display: flex;
@@ -266,9 +265,6 @@ a {
     padding: 40px;
 
     position: relative;
-
-    z-index: 3;
-
 }
 
 /* ========================= */
@@ -308,8 +304,6 @@ a {
 }
 
 .join-button a {
-    text-decoration: none;
-
     background-color: #3b3b3b;
 
     color: white;
@@ -346,18 +340,8 @@ a {
 
     border-top: 2px solid black;
 
-}
-
-/* ============================= */
-/* KEEPS CONTENT ABOVE THE BEANS */
-/* ============================= */
-
-.navbar,
-.main-container,
-.footer {
     position: relative;
-
-    z-index: 5;
+    z-index: 2;
 }
 
 /* ========================= */
@@ -403,19 +387,17 @@ a {
 /* INTERACTIVE COCOA BEANS */
 /* ========================= */
 
-#bean-background { 
+#bean-background {
     position: fixed;
 
-    top: 0;
+    inset: 0;
 
-    left: 0;
+    z-index: 1;
 
-    width: 100%;
-    height: 100%;
+    pointer-events: none;
 
-    z-index: 999;
-
-    pointer-events: none; }
+    overflow: hidden;
+}
 
 .bean {
     position: absolute;
@@ -423,7 +405,7 @@ a {
     width: 70px;
     height: 70px;
 
-    background-image: url("/Website/images/GreenBean.png");
+    background-image: url("../images/GreenBean.png");
 
     background-size: contain;
 
