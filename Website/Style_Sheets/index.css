@@ -264,6 +264,11 @@ a {
     color: black;
 
     padding: 40px;
+
+    position: relative;
+
+    z-index: 3;
+
 }
 
 /* ========================= */
@@ -340,6 +345,19 @@ a {
     padding: 20px;
 
     border-top: 2px solid black;
+
+}
+
+/* ============================= */
+/* KEEPS CONTENT ABOVE THE BEANS */
+/* ============================= */
+
+.navbar,
+.main-container,
+.footer {
+    position: relative;
+
+    z-index: 5;
 }
 
 /* ========================= */
@@ -379,4 +397,35 @@ a {
     .content p {
         font-size: 18px;
     }
+}
+
+/* ========================= */
+/* INTERACTIVE COCOA BEANS */
+/* ========================= */
+
+#bean-background {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 999;
+
+    pointer-events: none;
+}
+
+.bean {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    background-color: red;
+
+    opacity: 1;
+
+    z-index: 9999;
 }
