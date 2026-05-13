@@ -403,10 +403,11 @@ a {
 /* INTERACTIVE COCOA BEANS */
 /* ========================= */
 
-#bean-background {
+#bean-background { 
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
@@ -414,8 +415,7 @@ a {
 
     z-index: 999;
 
-    pointer-events: none;
-}
+    pointer-events: none; }
 
 .bean {
     position: absolute;
@@ -423,9 +423,17 @@ a {
     width: 70px;
     height: 70px;
 
-    background-color: red;
+    background-image: url("/Website/images/GreenBean.png");
 
-    opacity: 1;
+    background-size: contain;
 
-    z-index: 9999;
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    opacity: 0.9;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
