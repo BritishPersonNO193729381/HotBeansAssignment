@@ -37,7 +37,7 @@ a {
     border-bottom: 2px solid black;
 
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 /* ========================= */
@@ -140,7 +140,6 @@ a {
     min-height: 700px;
 
     position: relative;
-    z-index: 2;
 }
 
 /* ========================= */
@@ -157,6 +156,9 @@ a {
     padding: 25px;
 
     border-right: 2px solid black;
+
+    position: relative;
+    z-index: 5;
 }
 
 /* ========================= */
@@ -265,6 +267,76 @@ a {
     padding: 40px;
 
     position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+/* ========================= */
+/* SETTINGS COG */
+/* ========================= */
+
+.settings-cog {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: rgba(40,40,40,0.92);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0px 0px 10px rgba(0,0,0,0.4);
+
+    flex: none; /* IMPORTANT */
+}
+
+/* ICON */
+
+.settings-cog img {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+
+/* HOVER EFFECT */
+
+.settings-cog:hover {
+    transform: rotate(90deg) scale(1.08);
+
+    background-color: rgba(65,65,65,0.95);
+
+    box-shadow:
+        0px 0px 18px rgba(255,255,255,0.15);
+}
+
+/* KEEP TEXT ABOVE BEANS */
+
+.content h1,
+.content p,
+.join-button {
+    position: relative;
+    z-index: 2;
 }
 
 /* ========================= */
@@ -341,7 +413,7 @@ a {
     border-top: 2px solid black;
 
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 /* ========================= */
@@ -388,11 +460,11 @@ a {
 /* ========================= */
 
 #bean-background {
-    position: fixed;
+    position: absolute;
 
     inset: 0;
 
-    z-index: 1;
+    z-index: 0;
 
     pointer-events: none;
 
@@ -405,7 +477,7 @@ a {
     width: 70px;
     height: 70px;
 
-    background-image: url("../images/GreenBean.png");
+    background-image: url("../images/Beans/BrownBeansCurrent.png");
 
     background-size: contain;
 
@@ -413,7 +485,7 @@ a {
 
     background-position: center;
 
-    opacity: 0.9;
+    opacity: 0.5;
 
     transition:
         transform 0.2s ease,

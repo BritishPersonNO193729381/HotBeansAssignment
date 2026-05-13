@@ -13,3 +13,5 @@ Here are the exact links used:
 - JavaScript Animations: https://www.w3schools.com/js/js_htmldom_animate.asp
 - requestAnimationFrame: https://www.w3schools.com/jsref/met_win_requestanimationframe.asp
 - CSS Gradients: https://www.w3schools.com/css/css3_gradients.asp
+
+As a decploration, I didnt build the cookie stuff by myself, I used chatGPT and a youtube tutoral to get it done... nor god or I knows how this works... im just glad it does.
