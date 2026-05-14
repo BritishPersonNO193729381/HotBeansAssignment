@@ -1,28 +1,50 @@
 window.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Fancy Required .js Background Loaded!");
+    console.log("Bean Background System Loaded");
 
     const background = document.getElementById("bean-background");
 
-    const beanCount = 25;
+    // SAFETY CHECK
+    if (!background) {
+        console.error("Bean background container missing.");
+        return;
+    }
 
+    // SETTINGS (ONLY WHAT STILL EXISTS)
+    const beansEnabled =
+        document.body.dataset.beansEnabled !== "false";
+
+    const beanStyle =
+        "BrownBeansCurrent.png"; // fixed (no more dropdown system)
+
+    // STOP SYSTEM IF DISABLED
+    if (!beansEnabled) {
+        background.style.display = "none";
+        console.log("Beans disabled via settings.");
+        return;
+    }
+
+    const beanCount = 25;
     const beans = [];
 
-    // CONTENT AREA SIZE
-
-    const contentWidth = background.offsetWidth;
-    const contentHeight = background.offsetHeight;
+    const width = background.offsetWidth;
+    const height = background.offsetHeight;
 
     // CREATE BEANS
-
     for (let i = 0; i < beanCount; i++) {
 
         const bean = document.createElement("div");
-
         bean.classList.add("bean");
 
-        const x = Math.random() * contentWidth;
-        const y = Math.random() * contentHeight;
+        const img = document.createElement("img");
+        img.src = `images/Beans/${beanStyle}`;
+        img.alt = "Cocoa Bean";
+        img.draggable = false;
+
+        bean.appendChild(img);
+
+        const x = Math.random() * width;
+        const y = Math.random() * height;
 
         bean.style.left = `${x}px`;
         bean.style.top = `${y}px`;
@@ -31,70 +53,39 @@ window.addEventListener("DOMContentLoaded", () => {
 
         beans.push({
             element: bean,
-            x: x,
-            y: y,
+            x,
+            y,
             speedX: (Math.random() - 0.5) * 0.4,
             speedY: (Math.random() - 0.5) * 0.4
         });
     }
 
     // ANIMATION LOOP
-
     function animateBeans() {
 
-        const width = background.offsetWidth;
-        const height = background.offsetHeight;
+        const w = background.offsetWidth;
+        const h = background.offsetHeight;
 
-        beans.forEach(bean => {
+        for (let i = 0; i < beans.length; i++) {
 
-            bean.x += bean.speedX;
-            bean.y += bean.speedY;
+            const b = beans[i];
 
-            // WRAP AROUND CONTENT AREA
+            b.x += b.speedX;
+            b.y += b.speedY;
 
-            if (bean.x < -50) bean.x = width;
-            if (bean.x > width) bean.x = -50;
+            // WRAP AROUND EDGES
+            if (b.x < -50) b.x = w;
+            else if (b.x > w) b.x = -50;
 
-            if (bean.y < -50) bean.y = height;
-            if (bean.y > height) bean.y = -50;
+            if (b.y < -50) b.y = h;
+            else if (b.y > h) b.y = -50;
 
-            bean.element.style.left = `${bean.x}px`;
-            bean.element.style.top = `${bean.y}px`;
-        });
+            b.element.style.left = `${b.x}px`;
+            b.element.style.top = `${b.y}px`;
+        }
 
         requestAnimationFrame(animateBeans);
     }
 
     animateBeans();
-
-    // MOUSE INTERACTION
-
-    document.addEventListener("mousemove", (e) => {
-
-        const rect = background.getBoundingClientRect();
-
-        // MOUSE POSITION RELATIVE TO CONTENT
-
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-
-        beans.forEach(bean => {
-
-            const dx = mouseX - bean.x;
-            const dy = mouseY - bean.y;
-
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 140) {
-
-                bean.element.style.transform =
-                    `rotate(${dx * 0.05}deg) scale(1.15)`;
-
-            } else {
-
-                bean.element.style.transform =
-                    `rotate(25deg) scale(1)`;
-            }
-        });
-    });
 });

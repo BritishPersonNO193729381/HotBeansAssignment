@@ -45,6 +45,10 @@
                     Meet the Team
                 </a>
 
+                <a href="jobs.html">
+                    Available Jobs
+                </a>
+
                 <a href="courses.html">
                     Courses
                 </a>
@@ -75,9 +79,7 @@
 
     <div class="main-container">
 
-        <!-- ========================= -->
         <!-- SIDEBAR -->
-        <!-- ========================= -->
 
         <aside class="sidebar">
 
@@ -95,13 +97,9 @@
             <ul>
 
                 <li>Personal Details</li>
-
                 <li>Education</li>
-
                 <li>Skills & Experience</li>
-
                 <li>Portfolio Links</li>
-
                 <li>Submit Application</li>
 
             </ul>
@@ -134,7 +132,7 @@
 
             <div class="form-container">
 
-                <form class="application-form">
+                <form class="application-form" id="applicationForm">
 
                     <!-- FULL NAME -->
 
@@ -149,7 +147,9 @@
                             id="fullname"
                             name="fullname"
                             placeholder="Enter your full name"
-                            required>
+                            required
+                            minlength="2"
+                            maxlength="60">
 
                     </div>
 
@@ -182,7 +182,9 @@
                             type="tel"
                             id="phone"
                             name="phone"
-                            placeholder="Enter your phone number">
+                            placeholder="Enter your phone number"
+                            pattern="[0-9+\s]{7,20}"
+                            title="Enter a valid phone number">
 
                     </div>
 
@@ -235,6 +237,7 @@
                             id="experience"
                             name="experience"
                             rows="6"
+                            maxlength="1000"
                             placeholder="Tell us about your experience, projects, or skills..."></textarea>
 
                     </div>
@@ -251,7 +254,8 @@
                             type="url"
                             id="portfolio"
                             name="portfolio"
-                            placeholder="https://yourwebsite.com">
+                            placeholder="https://yourwebsite.com"
+                            pattern="https?://.+">
 
                     </div>
 
@@ -282,6 +286,37 @@
         Hayden Thomson | Hot Beans Web | 2026
 
     </footer>
+
+    <!-- ========================= -->
+    <!-- FORM HANDLER SCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+
+            // Validate form properly
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Optional storage (demo only)
+            const data = {
+                name: form.fullname.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                role: form.role.value
+            };
+
+            localStorage.setItem("lastApplication", JSON.stringify(data));
+
+            // Redirect to confirmation page
+            window.location.href = "appsent.html";
+        });
+    </script>
 
 </body>
 

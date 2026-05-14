@@ -1,15 +1,7 @@
 /* ============================
    HOT BEANS SETTINGS SYSTEM
    LOCALSTORAGE PERSISTENCE
-
-   DO NOT TOUCH AT ALL. ITS HYPERSENSITIVE 
-   CODE THAT CAN BREAK THE ENTIRE WEBSITE 
-   IF YOU CHANGE EVEN A SINGLE CHARACTER.
-
-   THIS TOOK ME A WEEK TO MAKE.
-
-   ONLY GOD, CHATGPT AND I KNOWS HOW 
-   THIS WORKS.
+   SIMPLIFIED VERSION
 =============================== */
 
 /* -------------------------
@@ -17,9 +9,7 @@
 ------------------------- */
 
 const defaultSettings = {
-    enableBeans: true,
-    enableInteraction: true,
-    beanStyle: "BrownBeansCurrent.png"
+    enableBeans: true
 };
 
 /* -------------------------
@@ -29,12 +19,13 @@ const defaultSettings = {
 function loadSettings() {
     const saved = localStorage.getItem("hotBeansSettings");
 
-    if (!saved) {
-        return { ...defaultSettings };
-    }
+    if (!saved) return { ...defaultSettings };
 
     try {
-        return { ...defaultSettings, ...JSON.parse(saved) };
+        return {
+            ...defaultSettings,
+            ...JSON.parse(saved)
+        };
     } catch (e) {
         console.error("Settings corrupted. Resetting to defaults.");
         return { ...defaultSettings };
@@ -50,33 +41,18 @@ function saveSettings(settings) {
 }
 
 /* -------------------------
-   APPLY SETTINGS TO UI
+   APPLY SETTINGS
 ------------------------- */
 
 function applySettings(settings) {
-
-    // Checkbox: Enable Beans
     const beansToggle = document.getElementById("toggle-beans");
+
     if (beansToggle) {
         beansToggle.checked = settings.enableBeans;
     }
 
-    // Checkbox: Interaction
-    const interactionToggle = document.getElementById("toggle-interaction");
-    if (interactionToggle) {
-        interactionToggle.checked = settings.enableInteraction;
-    }
-
-    // Dropdown: Bean Style
-    const beanStyleSelect = document.getElementById("bean-style");
-    if (beanStyleSelect) {
-        beanStyleSelect.value = settings.beanStyle;
-    }
-
-    // OPTIONAL: apply to actual site visuals if present
+    // Global site flag (used by bean system elsewhere)
     document.body.dataset.beansEnabled = settings.enableBeans;
-    document.body.dataset.beanInteraction = settings.enableInteraction;
-    document.body.dataset.beanStyle = settings.beanStyle;
 }
 
 /* -------------------------
@@ -87,48 +63,31 @@ let settings = loadSettings();
 applySettings(settings);
 
 /* -------------------------
-   EVENT LISTENERS
+   TOGGLE HANDLER
 ------------------------- */
 
-// Toggle Beans
-document.getElementById("toggle-beans").addEventListener("change", (e) => {
-    settings.enableBeans = e.target.checked;
-    saveSettings(settings);
-    applySettings(settings);
-});
+const beansToggle = document.getElementById("toggle-beans");
 
-// Toggle Interaction
-document.getElementById("toggle-interaction").addEventListener("change", (e) => {
-    settings.enableInteraction = e.target.checked;
-    saveSettings(settings);
-    applySettings(settings);
-});
-
-// Bean Style Dropdown
-document.getElementById("bean-style").addEventListener("change", (e) => {
-    settings.beanStyle = e.target.value;
-    saveSettings(settings);
-    applySettings(settings);
-});
+if (beansToggle) {
+    beansToggle.addEventListener("change", (e) => {
+        settings.enableBeans = e.target.checked;
+        saveSettings(settings);
+        applySettings(settings);
+    });
+}
 
 /* -------------------------
-   SAVE BUTTON HANDLER
+   OPTIONAL SAVE BUTTON
+   (Now just forces sync, no duplication)
 ------------------------- */
 
-document.getElementById("save-settings").addEventListener("click", () => {
+const saveButton = document.getElementById("save-settings");
 
-    // Re-read values directly from UI (safe + reliable)
+if (saveButton) {
+    saveButton.addEventListener("click", () => {
+        saveSettings(settings);
+        applySettings(settings);
 
-    settings.enableBeans = document.getElementById("toggle-beans").checked;
-    settings.enableInteraction = document.getElementById("toggle-interaction").checked;
-    settings.beanStyle = document.getElementById("bean-style").value;
-
-    // Save to localStorage
-    saveSettings(settings);
-
-    // Re-apply (optional but keeps everything synced)
-    applySettings(settings);
-
-    // Feedback
-    alert("Settings saved successfully!");
-});
+        alert("Settings saved successfully!");
+    });
+}

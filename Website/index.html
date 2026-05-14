@@ -12,7 +12,8 @@
 
 </head>
 
-<body>
+<!-- DEFAULT FALLBACK: ensures JS failures don’t break beans -->
+<body data-beans-enabled="true">
 
     <!-- NAVIGATION BAR -->
 
@@ -44,6 +45,10 @@
 
                 <a href="courses.html">
                     Courses
+                </a>
+
+                <a href="jobs.html">
+                    Available Jobs
                 </a>
 
                 <a href="about.html">
@@ -134,8 +139,8 @@
         <div class="content">
 
             <!-- INTERACTIVE COCOA BACKGROUND -->
-
-            <div id="bean-background"></div>
+            <!-- aria-hidden ensures it is treated as decorative only -->
+            <div id="bean-background" aria-hidden="true"></div>
 
             <!-- SETTINGS BUTTON -->
 
@@ -188,9 +193,13 @@
 
     </div>
 
-    <!-- COCOA BACKGROUND SCRIPT -->
+    <!-- SCRIPTS (SAFE LOADING WITH DEFER) -->
 
-    <script src="JavaScripts/CocoBackground.js"></script>
+    <!-- SETTINGS SYSTEM -->
+    <script src="JavaScripts/SettingsSaver.js" defer></script>
+
+    <!-- COCOA BEAN BACKGROUND SYSTEM -->
+    <script src="JavaScripts/CocoBackground.js" defer></script>
 
 </body>
 
